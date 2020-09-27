@@ -1,0 +1,51 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hang Man</title>
+    <script src="Opgave1.js" defer></script>
+
+    <style>
+        /*
+            Style with inspiration from:
+            https://www.smashingmagazine.com/2019/03/css-alignment/
+        */
+        .container {
+            width: 250px;
+            border: 5px solid rgb(128, 128, 128);
+            border-radius: .5em;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin: 1em;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: rgb(128, 128, 128);
+            border: 2px solid rgb(128, 128, 128);
+        }
+
+        .label {
+            text-decoration: underline;
+            font-size: 20px;
+            font: bold;
+        }
+    </style>
+</head>
+<body onload="initiateWord()">
+
+    <div class="container">
+        <button id="guessWordId" class="button" onclick="wordGuess()">Guess Word</button>
+        <button id="guessCharId" class="button" onclick="charGuess()">Guess Character</button>
+    </div>
+
+    <div id="wordGuessId" class="container">
+    </div>
+
+    <div id="usedCharsId" , class="container">
+        <label id="containerId">List contains used characters:</label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body onload="init()">
+        <script>
+
+            var aar;
+            var alder = 0;
+
+            function init()
+            {
+                aar = prompt("Indtast dit fødselsår");
+                beregnAlder();
+                udskrivAlder();
+            }
+
+            function beregnAlder()
+            {
+                let iaar = new Date().getFullYear();
+                alder = iaar - aar;
+            }
+
+            function udskrivAlder()
+            {
+                var resultat = "Din alder er " + alder;
+                document.write(resultat);
+            }    
+        </script>
+    </body>
+</html>

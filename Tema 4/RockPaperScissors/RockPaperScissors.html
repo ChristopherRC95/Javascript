@@ -1,0 +1,64 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Rock Paper Scissors</title>
+
+    <style>
+        .Computer-group label, 
+        .Box-group button {
+            border-style: solid;
+            border-color: gray;
+            color: black;
+            background: white;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            float: left;
+        }
+
+            .Computer-group label:not(:last-child) ,
+            .Box-group button:not(:last-child) {
+                border-right: none; /* Prevent double borders */
+            }
+
+        .Box-group button:focus {
+            color: #fff;
+            background-color: #2196F3;
+            border-color: #2196F3;
+        }
+
+        .Computer-group label:not(:first-child) {
+            border-left: none; /*Prevent double borders */
+        }
+
+
+    </style>
+
+    <script src="RockPaperScissors.js" defer></script>
+
+</head>
+<body>
+    <h1>Welcome to my rock, paper and scissors game</h1>
+    <h2>If you dare, select one of below listed options</h2>
+
+    <div>
+        <div class="Box-group">
+            <button id="rockId" value=0>Rock</button>
+            <button id="paperId" value=1>Paper</button>
+            <button id="scissorId" value=2>Scissor</button>
+        </div>
+
+        <br /><br /> <br />
+        <div class="Computer-group">
+            <label>Computer picks:</label>
+            <label id="computerId">COMPUTER</label>
+        </div>
+    </div>
+
+    <br /><br /> <br />
+    <label id="winId">Number of Wins:</label> <br />
+    <label id="ratioId">Win Ratio: </label>
+
+</body>
+</html>
